@@ -57,6 +57,7 @@ class testCalc(unittest.TestCase):
 
     def testAllAdd(self):
         self.assertEqual(calc("(add (add 0 0) (add 0 0))"), 0)
+        self.assertEqual(calc("(add (add 1 2) (add 3 4) (add 5 6))"), 21)
         self.assertEqual(calc("(add (multiply 1 2) (add 3 4))"), 9)
         self.assertEqual(calc("(add (add 1 2) (multiply 3 4))"), 15)
         self.assertEqual(calc("(multiply (add 1 2) (multiply 3 4))"), 36)
