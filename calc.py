@@ -53,7 +53,7 @@ def calc(input):
     while operationsCount > 0:
         # get bounds
         right = input.index(")")
-        left = input.rindex("(")
+        left = input.rindex("(", 0 , right)
         # extract func
         func = input[left+1 : right].split()
         # handle all func
